@@ -1,0 +1,192 @@
+/* Reset default margins and paddings */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Ensure gradient fills entire background */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Ensure the container takes full space */
+.signup-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* Left Section Styling */
+.signup-left-col {
+    text-align: center;
+    color: #fff;
+}
+
+.signup-logo {
+    border-radius: 50%;
+    border: 5px solid #ff007f;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.signup-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff007f; /* Vibrant accent color */
+    margin-top: 10px;
+    text-shadow: 2px 2px 10px rgba(255, 0, 127, 0.5);
+}
+
+.signup-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+}
+
+/* Card Styling */
+.signup-card {
+    background: rgba(255, 255, 255, 0.2); /* Glassmorphic background */
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 30px;
+    animation: fadeIn 1s ease-in-out;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 200px;
+}
+
+/* Form Styling */
+form {
+    width: 100%;
+}
+
+.signup-form-label {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.signup-form-control {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff; /* Maintain text color */
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.signup-form-control::placeholder {
+    color: red; /* Light placeholder color */
+    font-style: italic;
+}
+
+.signup-form-control:focus {
+    border-color: #ff007f;
+    box-shadow: 0 0 10px #ff007f;
+    outline: none;
+    color: #fff; /* Ensure text color remains white on focus */
+    background: none; /* Prevent background from changing */
+}
+
+.signup-textarea {
+    resize: none;
+}
+
+.signup-text-muted {
+    color: #ddd !important;
+}
+
+/* Button Styling */
+.signup-btn-primary {
+    background: linear-gradient(90deg, #ff007f, #ff8c00);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 100%;
+}
+
+.signup-btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(255, 0, 127, 0.4);
+}
+
+/* Link Styling */
+.signup-text-decoration-none {
+    color: #ff007f;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.signup-text-decoration-none:hover {
+    color: #ff3399;
+    text-decoration: underline;
+}
+
+.signup-btn-secondary {
+    background: linear-gradient(90deg, #007fff, #00c3ff);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.signup-btn-secondary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 127, 255, 0.4);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .signup-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .signup-card {
+        width: 90%;
+    }
+}
+
+/* Ensure the gradient fills the entire viewport */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+}

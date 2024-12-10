@@ -1,0 +1,225 @@
+/* Home page styles */
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.image-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 500px;
+  width: 100%;
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.image-card div {
+  padding: 15px;
+}
+
+.image-card .btn {
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 10px;
+  background-color: #6a11cb;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.image-card .btn:hover {
+  background-color: #2575fc;
+}
+
+/* Like count and comments section */
+.image-card .likes-comments {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.image-card .likes-comments span {
+  margin-right: 15px;
+}
+
+.image-card input {
+  width: calc(100% - 20px);
+  padding: 8px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.image-card input:focus {
+  border-color: #6a11cb;
+}
+
+.image-card p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Comments section */
+.comments-section {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comments-section h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.comments-section p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.comments-section input {
+  width: calc(100% - 20px);
+  padding: 8px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.comments-section input:focus {
+  border-color: #6a11cb;
+}
+
+/* Hamburger Icon (visible only on small screens) */
+.navbar-link-custom {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  transition: all 0.3s ease;
+  
+  
+}
+
+.navbar-link-custom:hover {
+  color: #6a11cb; /* Change color on hover */
+}
+
+.navbar-link-custom:focus {
+  outline: none;
+}
+
+.navbar-link-custom:active {
+  transform: scale(0.9); /* Shrink effect when clicked */
+}
+
+/* Mobile Navigation Menu */
+.d-flex.justify-content-between {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 10;
+}
+
+.d-flex.justify-content-between.d-block {
+  display: block;
+}
+
+.d-flex.justify-content-between .navbar-link-custom {
+  font-size: 20px;
+  padding: 10px;
+  background: none;
+  color: #333;
+  border: none;
+}
+
+.d-flex.justify-content-between .navbar-link-custom:hover {
+  color: #6a11cb;
+}
+
+.d-flex.justify-content-between .navbar-link-custom:active {
+  transform: scale(0.9);
+}
+
+.d-flex.justify-content-between .navbar-link-custom:focus {
+  outline: none;
+}
+
+/* Hide the navigation links for small screens */
+@media (max-width: 992px) {
+  .navbar-custom {
+    display: none; /* Hide the normal horizontal navbar on mobile */
+  }
+
+  /* Hamburger button on mobile */
+  .navbar-link-custom {
+    display: block;
+    font-size: 30px;
+  }
+
+  .navbar-custom.d-flex.justify-content-center {
+    display: block; /* Show navbar when hamburger is clicked */
+  }
+}
+
+/* Sticky Navbar Styles */
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15% !important;  /* Increased width */
+  z-index: 1000;
+  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 50px !important;
+  padding-bottom: 20px;  /* Added padding at the bottom */
+}
+
+/* Vertical Navbar Styles */
+.vertical-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;  /* Increased width */
+  padding-bottom: 20px; /* Added padding at the bottom */
+}
+
+.horizontal-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;  /* Added space between nav items */
+  width: 40% !important;
+  height: 15%; /* Added margin to create space between navbar and bottom */
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color:white;
+  margin-bottom: 1.5rem;
+}

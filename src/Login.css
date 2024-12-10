@@ -1,0 +1,155 @@
+/* General Page Styling */
+.page-container {
+    background: linear-gradient(135deg, #2b5876, #4e4376); /* Dark to light gradient */
+    min-height: 100vh;
+    display: flex;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    padding: 0; /* Remove overall page padding to reduce gap */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Vertically center the content */
+    flex-direction: row; /* Make sure both columns are in a row */
+}
+
+/* Columns Styling */
+.left-col, .right-col {
+    text-align: center;
+    flex: 1; /* Ensure columns take equal space */
+    padding: 0; /* Remove padding from columns */
+    margin: 0; /* Remove margin between columns */
+}
+
+/* Logo and Text Styling */
+.logo-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #ff007f;
+    margin-left: 100px;
+}
+
+.main-title {
+    font-size: 2rem;
+    color: #ff007f; /* Maintain this bright color for title */
+    margin-top: 10px; /* Reduced margin to bring the logo closer */
+    margin-left: 100px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #ddd; /* Lighter subtitle color for better readability */
+    margin-top: 5px; /* Reduced margin to bring subtitle closer */
+    margin-left: 100px;
+}
+
+/* Glassmorphic Card Container */
+.card-container {
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 30px;
+    max-width: 400px;
+    text-align: center;
+    margin-top: 20px; /* Reduced margin to bring card container closer */
+    margin-right: 300px;
+}
+
+/* Form Inputs */
+.input-field {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 100%;
+    outline: none;
+}
+
+.input-field:focus {
+    border-color: #ff007f;
+}
+
+/* Buttons */
+.primary-btn {
+    background: #ff007f;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 15px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+    background: #ff3399;
+}
+
+/* Sign Up Button (Styled Link as Button) */
+.signup-btn {
+    display: inline-block;
+    background-color: #34495e; /* Darker background for the sign up button */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+    background-color: #2c3e50; /* Darker shade for hover */
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    background: none;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.input-field::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Set a soft white color for placeholder */
+    font-style: italic; /* Optional: Make it italic for differentiation */
+}
+
+.input-field:focus {
+    border-color: #ff007f;
+    box-shadow: 0 0 10px #ff007f;
+}
+
+
+/* Forgot Password Button */
+.forgot-link {
+    display: inline-block;
+    background-color: #ff007f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.forgot-link:hover {
+    background-color: #ff3399;
+}
+
+/* Error Message */
+.error-msg {
+    color: #ff4d4d;
+}

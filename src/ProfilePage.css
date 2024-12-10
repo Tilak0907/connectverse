@@ -1,0 +1,348 @@
+body {
+  background-color: black;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* Wrapper */
+.profilePage-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Module */
+.profilePage-module {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 1.5rem;
+  max-width: 800px;
+  width: 90%;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+/* Burger Menu */
+.profilePage-burgerMenuContainer {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+.profilePage-burgerMenu {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.profilePage-burgerMenuDropdown {
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.profilePage-menuItem {
+  padding: 0.5rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profilePage-menuItem:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Profile Header */
+.profilePage-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profilePage-pictureContainer {
+  position: relative;
+}
+
+.profilePage-picture {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profilePage-picture:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+.profilePage-username {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Profile Details */
+.profilePage-details {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.profilePage-contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.profilePage-contactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Bio Section */
+.profilePage-bio {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+}
+
+/* User Stats */
+.profilePage-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+
+.profilePage-statItem {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.profilePage-statItem:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.profilePage-statValue {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.profilePage-statLabel {
+  font-size: 1rem;
+}
+
+/* Upload Section */
+.profilePage-uploadContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.profilePage-uploadContainer input[type="file"] {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.profilePage-uploadContainer input[type="file"]:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.profilePage-uploadContainer button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #2c3e50, #4b79a1);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.profilePage-uploadContainer button:hover {
+  background: linear-gradient(45deg, #4b79a1, #283c46);
+}
+
+/* Change Profile Picture Button */
+.profilePage-editButtonContainer {
+  margin-top: 1rem;
+  position: relative;
+}
+
+.profilePage-editButton {
+  background-color: #4b79a1;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  display: inline-block;
+  text-align: center;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.profilePage-editButton:hover {
+  background-color: #2c3e50;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+.profilePage-editButton:active {
+  background-color:none;
+  transform: scale(1);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+.profilePage-editButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(75, 121, 161, 0.6); /* Focus effect */
+}
+
+.profilePage-editButton::before {
+  /*content: '📸'; /* Camera icon before the text */
+  margin-right: 0.5rem;
+  font-size: 1.3rem;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+/* Profile Page CSS */
+.profilePage-posts {
+  margin-top: 20px;
+}
+
+.profilePage-postList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.profilePage-postCard {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.profilePage-postCard:hover {
+  transform: scale(1.05);
+}
+
+.profilePage-postImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Post Details Popup */
+.profilePage-postDetailsPopup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 500px;
+  z-index: 1000;
+}
+
+.profilePage-postDetailImage {
+  width: 100%;
+  height: auto;
+}
+
+.profilePage-postDetailInfo {
+  margin-top: 10px;
+}
+
+.profilePage-postDetailInfo button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profilePage-postDetailInfo button:hover {
+  background-color: #0056b3;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .profilePage-module {
+    padding: 1.5rem;
+  }
+
+  .profilePage-picture {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .profilePage-username {
+    font-size: 1.5rem;
+  }
+
+  .profilePage-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .profilePage-module {
+    padding: 1rem;
+  }
+
+  .profilePage-stats {
+    grid-template-columns: 1fr;
+  }
+}
